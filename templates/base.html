@@ -17,8 +17,19 @@
     <title>{% block title %}Blog Title{% endblock title %} </title>
 </head>
 <body style="background-color:blanchedalmond">
-    
-    <div style="background-color:blanchedalmond;" class="main-content">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'home' %}">The News</a>
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              <a class="nav-link active" href="{% url 'article_create' %}">Post New Article</a>
+              <a class="nav-link" href="{% url 'article_list' %}">List Articles</a>
+              <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+            </div>
+        </div>
+      </nav>
+    <div class="main-content">
         {% block content %}
         {% endblock content %}
     </div>

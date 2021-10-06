@@ -1,0 +1,38 @@
+.root{
+    background-color: blanchedalmond;
+}
+body {
+    background-color: blanchedalmond;
+    font-family: 'Scheherazade New', serif;
+    font-weight: 600;
+}
+.button {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 1px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    color: black;
+    background-color: burlywood;
+}
+.button:hover {
+    background-color: cornsilk;
+}
+
+.post-title{
+    text-decoration: none;
+    color: black;
+}
+
+.main-content{
+    width: 80%;
+    margin:auto auto;
+}
+.article-box{
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: rgb(243, 238, 230);
+    margin-top: 2rem;
+    padding: 5px;
+    
+}

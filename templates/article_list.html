@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Article List{% endblock title %}
+
+{% block content %}
+
+<h1>Articles</h1>
+
+{% for article in article_list %}
+    <div class="article-box">
+        <h3>
+            <a href="{% url 'article_detail' article.pk %}" class="post-title">{{ article.title }}</a>
+        </h3>
+        <p>{{ article.body }}</p>
+        <div style="display: flex; justify-content: space-between;">
+            <p>Author: {{ article.author }}</p>
+            <div>
+                <a href="{% url 'article_detail' article.pk %}" class="buttons">Details</a>
+                <a href="{% url 'article_edit' article.pk %}" class="buttons">Edit</a>
+                <a href="{% url 'article_delete' article.pk %}" class="buttons">Delete</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+{% endblock content %}

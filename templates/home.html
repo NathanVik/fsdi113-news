@@ -3,8 +3,11 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-<h1>Home Page</h1>
-<p><a href="{% url 'login' %}">Log In Here</a></p>
+<h1>Welcome to the News!</h1>
+<h3>View our articles <a href="{% url 'article_list' %}">Here!</a></h3>
+
+<p><a href="{% url 'signup' %}">Create an Account</a></p>
+<p><a href="{% url 'login' %}">Log In</a></p>
 
 
 {% endblock content %}
