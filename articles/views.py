@@ -39,7 +39,7 @@ class ArticleDetailView(DetailView):
     model = Article
     template_name = "article_detail.html"
 
-class ArticleCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
+class ArticleCreateView(LoginRequiredMixin, CreateView):
     model = Article
     template_name = "article_create.html"
     fields = ["title", "body"]
@@ -48,6 +48,3 @@ class ArticleCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
         
-    def test_func(self):
-        obj = self.get_object()
-        return obj.author == self.request.user
